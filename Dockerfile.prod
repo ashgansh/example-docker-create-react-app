@@ -1,0 +1,10 @@
+# Image Base
+FROM project-base
+
+
+# Compiling Javascript
+COPY ./ /app
+RUN npm run build
+
+# Exposing the assets
+VOLUME /app/build
